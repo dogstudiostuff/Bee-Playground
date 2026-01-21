@@ -35,7 +35,12 @@ document.getElementById("clickme").addEventListener("click", displayVideo)
 
 document.getElementById("authenticate").addEventListener("click", authenticate)
 
-if (typeof key === undefined || typeof key === null) {
+try {
+    if (key === "test") {
+        console.log("authenticated")
+    }
+} catch {
     document.getElementById("clickme").innerText = "Authenticate First!"
     document.getElementById("clickme").disabled = true
+    console.warn("not authenticated!")
 }
