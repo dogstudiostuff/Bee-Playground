@@ -35,7 +35,7 @@ document.getElementById("clickme").addEventListener("click", displayVideo)
 
 document.getElementById("authenticate").addEventListener("click", authenticate)
 
-if (key === null) {
+if (typeof key === undefined || typeof key === null) {
     document.getElementById("clickme").innerText = "Authenticate First!"
     document.getElementById("clickme").disabled = true
 }
